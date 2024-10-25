@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Assignment</title>
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js"></script>
+  <style>
+    /* Add a two-tone diagonal background */
+    #assignment {
+      background: linear-gradient(154deg, rgb(57, 11, 92) 50%, azure 50%);
+      margin: 20px; /* Ensure margins around the assignment section */
+    }
+    .text-gray-700 {
+      color: black;
+      background-color: white;
+      display: flex;
+      justify-content: center;
+      font-size: 12px;
+    }
+    .Heading {
+      color: black;
+      background-color: white;
+      display: flex;
+      justify-content: center;
+      font-size: 17px;
+    }
+    .half-circle-img {
+      width: 80px;
+      height: 80px;
+      border-radius: 90px; /* Removed border-radius */
+      border: 4px solid rgb(57, 11, 92);
+      overflow: hidden;
+      position: absolute;
+      top: -40px; /* Move up to show half outside the box */
+      left: 50%;
+      transform: translateX(-50%);
+      display: flex;
+      justify-content: center;
+      align-items: center; /* Center icon */
+      background-color: white; /* Background color for circle */
+    }
+    /* Container for the box */
+    .box-container {
+      position: relative; /* Positioning context for the half-circle image */
+      padding-top: 60px; /* Add padding to create space for the half-circle */
+      margin-top: 60px; /* Move boxes down below the "OUR SERVICES" title */
+      width: 25%; /* Increased width to accommodate 4 boxes in a row */
+      margin-right: 1%; /* Decrease space between boxes */
+    }
+    .box-container:last-child {
+      margin-right: 0; /* Remove margin for the last box */
+    }
+    .services {
+      color: white;
+      font-size: 28px;
+      margin-bottom: 20px; /* Add space below the tiAriatle */
+      font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    }
+    .icon-stack {
+      display: flex;
+      flex-direction: column; /* Stack icons vertically */
+      align-items: center; /* Center align icons */
+    }
+  </style>
+</head>
+<body class="flex justify-center items-center min-h-screen bg-gray-100">
+
+  <!-- Main Container with Diagonal Background -->
+  <div id="assignment" class="p-8 shadow-lg border border-gray-200">
+    <div class="services">
+      OUR SERVICES
+    </div>
+    <div class="flex"> <!-- Flex container to arrange boxes horizontally -->
+      
+      <!-- Box 1 -->
+      <div class="p-6 bg-white shadow-md hover:rotate-360 box-container">
+        <div class="half-circle-img">
+          <div class="icon-stack">
+            <i class="fas fa-wrench fa-2x" style="color: rgb(57, 11, 92);"></i> <!-- Wrench icon -->
+            <i class="fas fa-pipe fa-2x" style="color: rgb(57, 11, 92);"></i> <!-- Pipe icon -->
+            <i class="fas fa-water fa-2x" style="color: rgb(57, 11, 92);"></i> <!-- Water droplet icon -->
+          </div>
+        </div>
+        
+        <b><p class="Heading">Emergency Plumbing</p></b>
+        <b><p class="Heading">Services</p></b><br>
+        <p class="text-gray-700">Our plumbers are ready to go </p>
+        <p class="text-gray-700">24/7 for emergencies - including </p>
+        <p class="text-gray-700">nights, weekends, and holidays.</p><br>
+        <h class="text-blue-500 cursor-pointer">EXPLORE THIS SERVICE &gt;</h>
+      </div>
+      
+      <!-- Box 2 -->
+      <div class="p-6 bg-white shadow-md hover:rotate-360 box-container">
+        <div class="half-circle-img">
+          <i class="fas fa-wrench fa-2x" style="color: rgb(57, 11, 92);"></i> <!-- Wrench icon -->
+        </div>
+        <b><p class="Heading">Plumbing and Drains</p></b><br>
+        <p class="text-gray-700">As the largest plumbing and drain service company, we make thousands of repairs every day.</p><br>
+        <h class="text-blue-500 cursor-pointer">EXPLORE THIS SERVICE &gt;</h>
+      </div>
+      
+      <!-- Box 3 -->
+      <div class="p-6 bg-white shadow-md hover:rotate-360 box-container">
+        <div class="half-circle-img">
+          <i class="fas fa-water fa-2x" style="color: rgb(57, 11, 92);"></i> <!-- Water icon -->
+        </div>
+        <b><p class="Heading">Water Damage</p></b><br>
+        <p class="text-gray-700">Our teams are equipped with state-of-the-art water extraction and cleanup equipment.</p><br>
+        <h class="text-blue-500 cursor-pointer">EXPLORE THIS SERVICE &gt;</h>
+      </div>
+      
+      <!-- Box 4 -->
+      <div class="p-6 bg-white shadow-md hover:rotate-360 box-container">
+        <div class="half-circle-img">
+          <i class="fas fa-fire fa-2x" style="color: rgb(57, 11, 92);"></i> <!-- Fire icon -->
+        </div>
+        <b><p class="Heading">Water Heaters</p></b><br>
+        <p class="text-gray-700">Trust Roto-Rooter for repair and replacement of gas, electric, and tankless water heaters.</p><br>
+        <h class="text-blue-500 cursor-pointer">EXPLORE THIS SERVICE &gt;</h>
+      </div>
+
+    </div>
+  </div>
+
+</body>
+<script>
+  // Apply animation using anime.js for 360-degree rotation on hover
+  document.querySelectorAll('.hover\\:rotate-360').forEach((el) => {
+    el.addEventListener('mouseenter', () => {
+      anime({
+        targets: el,
+        rotate: '1turn',
+        duration: 1000,
+        easing: 'easeInOutQuad',
+      });
+    });
+  });
+</script>
+</html>
