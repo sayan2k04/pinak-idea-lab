@@ -1,0 +1,57 @@
+/* Add a two-tone diagonal background */
+#assignment {
+    background: linear-gradient(154deg, rgb(57, 11, 92) 50%, azure 50%);
+    margin: 20px; /* Ensure margins around the assignment section */
+  }
+  .text-gray-700 {
+    color: black;
+    background-color: white;
+    display: flex;
+    justify-content: center;
+    font-size: 12px;
+  }
+  .Heading {
+    color: black;
+    background-color: white;
+    display: flex;
+    justify-content: center;
+    font-size: 17px;
+  }
+  .half-circle-img {
+    width: 80px;
+    height: 80px;
+    border-radius: 90px; /* Removed border-radius */
+    border: 4px solid rgb(57, 11, 92);
+    overflow: hidden;
+    position: absolute;
+    top: -40px; /* Move up to show half outside the box */
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    justify-content: center;
+    align-items: center; /* Center icon */
+    background-color: white; /* Background color for circle */
+  }
+  /* Container for the box */
+  .box-container {
+    position: relative; /* Positioning context for the half-circle image */
+    padding-top: 60px; /* Add padding to create space for the half-circle */
+    margin-top: 60px; /* Move boxes down below the "OUR SERVICES" title */
+    width: 25%; /* Increased width to accommodate 4 boxes in a row */
+    margin-right: 1%; /* Decrease space between boxes */
+  }
+  .box-container:last-child {
+    margin-right: 0; /* Remove margin for the last box */
+  }
+  .services {
+    color: white;
+    font-size: 28px;
+    margin-bottom: 3px; /* Add space below the title */
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+  }
+  .icon-stack {
+    display: flex;
+    flex-direction: column; /* Stack icons vertically */
+    align-items: center; /* Center align icons */
+  }
+  
